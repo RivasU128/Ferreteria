@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferretería MiHerramienta</title>
+    <style>
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image:url(/fondoclavones.jpg);
+}
+.productos{
+    background-image: url(/fondoclavones.jpg);
+}
+main{
+    background-image: url(/fondoclavones.jpg);
+}
+
+/* Encabezado */
+header {
+    background-image: url(fondo-nav.png);
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    font-size: 28px;
+    margin: 0;
+    color: #fff;
+    flex: left;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.menu a:hover {
+    color: #0b62e6;
+}
+
+/* Contenido principal */
+.hero {
+    background-image: url("/fondoclavones.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #3780d3;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #333;
+    color: hwb(214 18% 18%);
+}
+
+.productos {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-image: url(/fondoclavones.jpg);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.productos h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #2a7ba0;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .menu.active {
+        display: flex;
+    }
+    .menu li {
+        margin: 10px 0;
+    }
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+    .menu-toggle span {
+        background-color: #fff;
+        height: 3px;
+        width: 25px;
+        margin: 3px 0;
+    }
+}
+
+
+
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+
+    menuToggle.addEventListener("click", function () {
+        menu.classList.toggle("active");
+    });
+});
+
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="" height="90px" width="auto"></a>
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sucursal.html">Sucursal</a></li>
+                <li><a href="empleados.html">Empleados</a></li>
+                <li><a href="Productos.html">Productos</a></li>
+                <li><a href="ticket.html">Ticket</a></li>
+                <li><a href="proveedor.html">Proveedor</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Bienvenido a Ferretería MiHerramienta</h1>
+            <p>Tu fuente confiable de herramientas y suministros para construcción y bricolaje.</p>
+            <a href="#" class="cta-button">Ver Productos</a>
+        </section>
+
+        <section class="productos">
+<img src="fondobody.png" alt="" height="100%" width="100%">            <!-- Aquí puedes agregar imágenes y descripciones de tus productos -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; RIvas Mireles Uriel 5toI</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
